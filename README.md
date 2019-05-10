@@ -15,3 +15,6 @@ Intercept Attachment From Exchange 2013
 	1. 用 Exchange Management Shell 运行 Uninstall.ps1
 	2. 关闭Exchange Management Shell
 
+
+
+项目是根据 https://code.msdn.microsoft.com/exchange/Exchange-2013-Build-an-6e544269 这个改编来的

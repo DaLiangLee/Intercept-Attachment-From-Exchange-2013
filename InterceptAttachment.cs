@@ -78,17 +78,11 @@ namespace Microsoft.Exchange.Samples.InterceptAttachment
                 
             }
         }
-        public static void MoveFile(string sPath, Microsoft.Exchange.Data.Transport.Email.AttachmentCollection attachments)
+        public static void MoveFile(string sPath, Data.Transport.Email.AttachmentCollection attachments)
         {
             foreach (var attachment in attachments) {
 
                 var readStream = attachment.GetContentReadStream();
-                StreamWriter sr = File.AppendText(sPath + "ReadStream.txt");
-                sr.WriteLine("开始写入值 readStream");
-                sr.WriteLine(readStream.Length);
-                sr.WriteLine("FileName -------");
-                sr.WriteLine(attachment.FileName);
-                sr.WriteLine(attachments.Count);
                 // Save the file in the attachment
                 byte[] bytes = new byte[readStream.Length];
                 readStream.Read(bytes, 0, bytes.Length);
@@ -102,7 +96,6 @@ namespace Microsoft.Exchange.Samples.InterceptAttachment
                     // 判断是否存在同名文件
                     if (File.Exists(fullPath))
                     {
-                        sr.WriteLine("存在文件了");
                         string directory = Path.GetDirectoryName(fullPath);
                         string filename = Path.GetFileNameWithoutExtension(fullPath);
                         string extension = Path.GetExtension(fullPath);
@@ -113,7 +106,6 @@ namespace Microsoft.Exchange.Samples.InterceptAttachment
                             string newFilename = string.Format("{0}({1}){2}", filename, counter, extension);
                             fullPath = Path.Combine(directory, newFilename);
                             counter++;
-                            sr.WriteLine(fullPath);
                         }
                     }
 
@@ -122,20 +114,11 @@ namespace Microsoft.Exchange.Samples.InterceptAttachment
 
                     bw.Write(bytes);
 
-                    sr.WriteLine("-------------bytes---------------");
-                    sr.WriteLine(bytes.Length);
-                    sr.WriteLine("fullPath -----");
-                    sr.WriteLine(fullPath);
-
                     bw.Close();
                     fs.Close();
-                    sr.Close();
                 }
                 catch(Exception ex)
                 {
-                    sr.WriteLine("-------------ex---------------");
-                    sr.WriteLine(ex.Message);
-
                 }
             }
         }

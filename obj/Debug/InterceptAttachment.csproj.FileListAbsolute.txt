@@ -10,3 +10,6 @@ C:\Users\FangYing\Documents\高速\InterceptAttachment\C# and C++\C#,C++\Interce
 C:\Users\FangYing\Documents\高速\InterceptAttachment\C# and C++\C#,C++\InterceptAttachment\InterceptAttachment\bin\Debug\InterceptAttachment.pdb
 C:\Users\FangYing\Documents\高速\InterceptAttachment\C# and C++\C#,C++\InterceptAttachment\InterceptAttachment\obj\Debug\InterceptAttachment.dll
 C:\Users\FangYing\Documents\高速\InterceptAttachment\C# and C++\C#,C++\InterceptAttachment\InterceptAttachment\obj\Debug\InterceptAttachment.pdb
+C:\Users\FangYing\Documents\高速\InterceptAttachment\C# and C++\C#,C++\InterceptAttachment\InterceptAttachment\obj\Debug\InterceptAttachment.csprojAssemblyReference.cache
+C:\Users\FangYing\Documents\高速\InterceptAttachment\C# and C++\C#,C++\InterceptAttachment\InterceptAttachment\obj\Debug\InterceptAttachment.csproj.CoreCompileInputs.cache
+C:\Users\FangYing\Documents\高速\InterceptAttachment\C# and C++\C#,C++\InterceptAttachment\InterceptAttachment\obj\Debug\InterceptAttachment.csproj.CopyComplete
